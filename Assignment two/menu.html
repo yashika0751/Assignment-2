@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Adding title -->
+<title>Order now</title>
+<!-- linking css  -->
+<link rel="stylesheet" href="./css/form.css">
+<!-- Adding fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Making divs and giving them class  -->
+<div class="container">
+  <h1>Pizza Night</h1>
+  <form>
+    <h2>Contact Information</h2>
+    <!-- Taking users info  -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 1234567890" required>
+    <!-- Adding Customizations -->
+    <h2>Customizations</h2>
+    <label for="pizzaType">Pizza Type:</label>
+    <select id="pizzaType" name="pizzaType">
+      <option value="Pepperoni">Pepperoni</option>
+      <option value="cheese">Cheese</option>
+      <option value="vegetarian">Vegetarian</option>
+      <option value="chicken">Chicken</option>
+      <option value="deep dish">Deep dish</option>
+    </select>
+    
+    <label for="size">Size:</label>
+    <select id="size" name="size">
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+    
+    <label for="crust">Crust:</label>
+    <select id="crust" name="crust">
+      <option>Thin Crust</option>
+      <option>Thick Crust</option>
+      <option>Cheese burst</option>
+    </select>
+    <!-- Adding toppings  -->
+    <fieldset>
+      <legend>Toppings:</legend>
+      <label><input type="checkbox"> Pepper</label>
+      <label><input type="checkbox"> Mushroom</label>
+      <label><input type="checkbox"> Olive</label>
+      <label><input type="checkbox"> Onion</label>
+      <label><input type="checkbox"> Tomato</label>
+      <label><input type="checkbox"> Jalapenos</label>
+      <label><input type="checkbox"> Red chilli</label>
+      <label><input type="checkbox"> Extra Cheese</label>
+    </fieldset>
+    
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1">
+    <!-- Place order button  -->
+    <button type="submit">Place Order</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Default styles for elements */
+body {
+     background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px; /* Default font size */
+    line-height: 1.5; /* Default line height */
+    position: relative; /* Add relative positioning to the body */
+}
+
+/* Adding font style */
+body, #logo, h1, h2, p {
+    font-family: "poppins", sans-serif;
+}
+/* changing colors */
+p{
+    color: brown;
+}
+h1{
+    color: orange;
+}
+h2{
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: beige;
+}
+/* Header styles */
+body > header {
+    height: 50px;
+    background-color: black;
+    width: auto;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between; /* Distribute menu and logo on the header */
+    align-items: center; /* Center vertically */
+}
+body > header > #logo {
+    color: orange;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+body > header > nav > menu > li {
+    padding: 0 12px;
+    font-size: 1.2em;
+}
+
+body > header > nav > menu {
+    list-style: none;
+    display: flex;
+    margin-right: 2%; /* Adjust the right margin */
+}
+
+body > header > nav > a {
+    text-decoration: none;
+    color: white; 
+}
+
+/* Main content styles */
+body > main > section:nth-child(1) {
+    position: relative; /* Add relative positioning to the section */
+}
+
+#ex {
+    justify-content: center;
+    text-align: center;
+    color: darkblue;
+    margin-top: 1%;
+    font-size: 2em;
+}
+
+#ex1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-right: 50%; ;
+    margin-top: 5%;
+}
+#ex1 > p{
+    font-family: "Anton",sans-serif;
+}
+
+body > main > section:nth-child(2) {
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the grid columns for responsiveness */
+    justify-items: center; /* Center grid items horizontally */
+    text-align: center;
+    grid-gap: 20px; /* Add some spacing between grid items */
+    position: relative; /* Add relative positioning to the section */
+}
+
+.desc{
+    font-size: 1.5em;
+    font-family: "Space Grotesk",sans-serif;
+}
+body > main > section:nth-child(2) > div {
+    margin: 10%;
+    position: relative; /* Add relative positioning to the div */
+}
+
+img {
+    margin-top: 10%;
+    height: auto; /* Allow images to scale down proportionally */
+    max-width: 100%;
+    border: 5px solid#555
+}
+
+/* Text centered over the image */
+div.text-over-image {
+    position: absolute;
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+    text-align: center;
+}
+
+
+div.text-over-image h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8em;
+}
+h2{
+    color: beige;
+}
+div.text-over-image p {
+    font-family: "REM", sans-serif;
+    color: wheat;
+}
+footer{
+    text-align: center;
+    margin-bottom: 2%;
+
+}
+#contact{
+    margin-top: 20px;
+    color: beige;
+    background-color: black;
+}
+button{
+    height: 45px;
+    width: 100px;
+    font-size: 1.2em;
+    background-color: red;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust font size and other styles for smaller screens */
+    body {
+        font-size: 14px;
+    }
+
+    body > header > nav > menu {
+        display: none; /* Hide the menu on smaller screens */
+    }
+
+    body > header > #logo {
+        font-size: 1.8em;
+    }
+
+    /* Adjust grid columns for smaller screens */
+    body > main > section:nth-child(2) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+}
